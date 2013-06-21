@@ -40,7 +40,7 @@ read_entire_file( FILE* fp, size_t* out_size )
   }
 
   *out_size = size;
-  return grow_buffer( buffer, max, size );
+  return grow_buffer( buffer, max, size+1 );
 }
 
 int main( int argc, char** argv )
@@ -70,7 +70,7 @@ int main( int argc, char** argv )
   {
     if ((infile = fopen(argv[2], "r")) == NULL)
     {
-			warn("Cannot open output file: %s", argv[2]);
+			warn("Cannot open input file: %s", argv[2]);
 			exit(1);
     }
   }
