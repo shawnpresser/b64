@@ -14,5 +14,8 @@ clean:
 install: b64
 	install -m 0755 ./b64 $(prefix)/bin
 
+uninstall:
+	rm -f $(prefix)/bin/b64
+
 .PHONY: all install
 
