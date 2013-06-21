@@ -16,5 +16,5 @@ install: b64
 uninstall:
 	rm -f $(prefix)/bin/b64
 
-.PHONY: all install uninstall
+.PHONY: all clean install uninstall
 
