@@ -1,6 +1,5 @@
 
 prefix=/usr/local
-progname=b64
 
 b64:
 	gcc b64.c b64_main.c -o b64
