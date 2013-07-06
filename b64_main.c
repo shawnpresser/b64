@@ -81,11 +81,16 @@ int main( int argc, char** argv )
 
     {
       char* out = calloc( 1, 2*inputlen );
+      size_t len = 0;
       if ( dec )
-        b64_decode( input, inputlen, out );
+        len = b64_decode( input, inputlen, out );
       else
-        b64_encode( input, inputlen, out );
-      printf( "%s", out );
+        len = b64_encode( input, inputlen, out );
+      {
+        size_t i = 0;
+        for ( ; i < len; i++ )
+          fputc( out[ i ], stdout );
+      }
       free( out );
     }
   }

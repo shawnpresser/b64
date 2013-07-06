@@ -2,7 +2,7 @@
 prefix=/usr/local
 
 b64:
-	gcc b64.c b64_main.c -o b64
+	gcc -g -O2 b64.c b64_main.c -o b64
 
 all: b64
 
